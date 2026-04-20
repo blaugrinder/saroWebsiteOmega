@@ -22,9 +22,7 @@ export default function ContactPage() {
           </div>
           <div className="mt-6 rounded-xl border border-slate-200 p-5">
             <h2 className="text-xl font-semibold text-medical-blue">Zones couvertes</h2>
-            <p className="mt-2 text-sm text-slate-600">
-              Antananarivo, regions voisines et transports medicalises sur l'ensemble du territoire national.
-            </p>
+            <p className="mt-2 text-sm text-slate-600">Tout Madagascar.</p>
           </div>
         </div>
 

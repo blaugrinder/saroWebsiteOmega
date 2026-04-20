@@ -1,18 +1,33 @@
 const services = [
   {
-    title: 'Urgence ambulance 24h/24',
+    title: 'Transport medicalise',
     description:
-      'Intervention immediate pour accidents, detresses vitales et transferts urgents vers les centres hospitaliers.',
+      'Transfert sanitaire encadre par des equipes qualifiees, sur courte et longue distance.',
   },
   {
-    title: 'Transport medicalise national',
+    title: "Assistance medicale d'urgence",
     description:
-      'Transport sanitaire encadre sur toute l ile pour consultations, hospitalisations et retours a domicile.',
+      'Intervention rapide pour les situations critiques avec prise en charge pre-hospitaliere.',
   },
   {
-    title: "Assistance d'evenements",
+    title: "Couverture d'evenements",
     description:
-      'Couverture medicale preventive pour evenements culturels, concerts, courses, trails et manifestations sportives.',
+      "Dispositif medical sur place pour evenements culturels, sportifs, courses, trails et plus.",
+  },
+  {
+    title: 'Services medicaux a domicile',
+    description:
+      'Interventions et accompagnement sanitaire a domicile selon les besoins du patient.',
+  },
+  {
+    title: 'Transport medical specialise',
+    description:
+      'Transport adapte aux pathologies et situations particulieres avec equipement dedie.',
+  },
+  {
+    title: 'Partenariats et contrats',
+    description:
+      "Solutions sur mesure pour entreprises, institutions, organisateurs d'evenements et structures de sante.",
   },
 ]
 
@@ -21,11 +36,11 @@ export default function ServicesPage() {
     <section className="mx-auto max-w-6xl px-4 py-14 md:px-6">
       <p className="text-sm font-semibold uppercase tracking-wider text-medical-red">Nos services</p>
       <h1 className="mt-2 max-w-4xl text-4xl font-semibold text-medical-blue">
-        Une offre complete pour l urgence, le transport medicalise et la securisation d'evenements
+        Les activites principales de SARO
       </h1>
       <p className="mt-4 max-w-3xl text-slate-700">
-        SARO intervient avec des equipes qualifiees, des ambulances equipees et une coordination continue avec les
-        etablissements de sante.
+        Nous proposons une prise en charge medicale complete sur tout Madagascar, pour les urgences, les transports
+        sanitaires et les besoins professionnels.
       </p>
 
       <div className="mt-10 grid gap-6 md:grid-cols-3">

@@ -21,6 +21,14 @@ export default function Layout({ children }) {
 
   return (
     <div className="min-h-screen bg-[#f8fbff]">
+      <div className="border-b border-blue-100 bg-medical-blue text-white">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2 text-xs md:px-6">
+          <p>Interventions, transports medicalises et assistances evenementielles sur tout Madagascar</p>
+          <a href="tel:+261341234567" className="font-semibold text-blue-100 hover:text-white">
+            +261 34 12 345 67
+          </a>
+        </div>
+      </div>
       <header className="sticky top-0 z-50 border-b border-white/30 bg-white/80 backdrop-blur-xl">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6">
           <NavLink to="/" className="flex items-center gap-2 text-medical-blue">
