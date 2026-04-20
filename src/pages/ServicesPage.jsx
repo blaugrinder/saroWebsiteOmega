@@ -1,30 +1,38 @@
+import { Handshake, HeartPulse, HousePlus, Stethoscope, Truck, Users } from 'lucide-react'
+
 const services = [
   {
+    icon: Truck,
     title: 'Transport medicalise',
     description:
       'Transfert sanitaire encadre par des equipes qualifiees, sur courte et longue distance.',
   },
   {
+    icon: HeartPulse,
     title: "Assistance medicale d'urgence",
     description:
       'Intervention rapide pour les situations critiques avec prise en charge pre-hospitaliere.',
   },
   {
+    icon: Users,
     title: "Couverture d'evenements",
     description:
       "Dispositif medical sur place pour evenements culturels, sportifs, courses, trails et plus.",
   },
   {
+    icon: HousePlus,
     title: 'Services medicaux a domicile',
     description:
       'Interventions et accompagnement sanitaire a domicile selon les besoins du patient.',
   },
   {
+    icon: Stethoscope,
     title: 'Transport medical specialise',
     description:
       'Transport adapte aux pathologies et situations particulieres avec equipement dedie.',
   },
   {
+    icon: Handshake,
     title: 'Partenariats et contrats',
     description:
       "Solutions sur mesure pour entreprises, institutions, organisateurs d'evenements et structures de sante.",
@@ -43,12 +51,15 @@ export default function ServicesPage() {
         sanitaires et les besoins professionnels.
       </p>
 
-      <div className="mt-10 grid gap-6 md:grid-cols-3">
+      <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {services.map((service) => (
           <article
             key={service.title}
-            className="rounded-2xl border border-slate-200 bg-white p-6 shadow-lg shadow-slate-900/5 transition hover:-translate-y-1"
+            className="rounded-2xl border border-slate-200 bg-white p-6 shadow-lg shadow-slate-900/5 transition duration-300 hover:-translate-y-1 hover:border-blue-200"
           >
+            <div className="inline-flex rounded-lg bg-blue-50 p-2 text-medical-blue">
+              <service.icon className="h-5 w-5" />
+            </div>
             <h2 className="text-2xl font-semibold text-medical-blue">{service.title}</h2>
             <p className="mt-3 text-sm leading-6 text-slate-600">{service.description}</p>
           </article>

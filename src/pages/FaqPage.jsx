@@ -31,6 +31,19 @@ export default function FaqPage() {
           </details>
         ))}
       </div>
+
+      <div className="mt-10 rounded-2xl border border-blue-200 bg-blue-50 p-6">
+        <h2 className="text-2xl font-semibold text-medical-blue">Besoin d'une reponse immediate ?</h2>
+        <p className="mt-2 text-sm text-slate-600">
+          En situation urgente, ne restez pas sur la FAQ. Contactez directement notre regulation.
+        </p>
+        <a
+          href="tel:+261341234567"
+          className="mt-4 inline-flex rounded-full bg-medical-red px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-red-700"
+        >
+          Appeler l'urgence
+        </a>
+      </div>
     </section>
   )
 }

@@ -15,6 +15,13 @@ export default function ContactPage() {
           >
             Urgence : +261 34 12 345 67
           </a>
+          <div className="mt-5 flex flex-wrap gap-2">
+            {['Urgence 24/7', 'Transport medicalise', "Assistance d'evenements"].map((chip) => (
+              <span key={chip} className="rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs font-medium text-medical-blue">
+                {chip}
+              </span>
+            ))}
+          </div>
           <div className="mt-6 rounded-xl border border-slate-200 p-5">
             <h2 className="text-xl font-semibold text-medical-blue">Horaires</h2>
             <p className="mt-2 font-semibold text-medical-red">24h/24 - 7j/7</p>
@@ -27,7 +34,7 @@ export default function ContactPage() {
         </div>
 
         <div className="space-y-6">
-          <form className="rounded-2xl border border-slate-200 bg-soft-gray p-6 shadow-lg shadow-slate-900/5">
+          <form className="rounded-2xl border border-slate-200 bg-gradient-to-br from-[#f4f8ff] to-white p-6 shadow-lg shadow-slate-900/5">
             <h2 className="text-xl font-semibold text-medical-blue">Formulaire de demande</h2>
             <div className="mt-4 space-y-4">
               <input
@@ -53,7 +60,7 @@ export default function ContactPage() {
               </select>
               <button
                 type="submit"
-                className="w-full rounded-full bg-medical-blue px-4 py-3 text-sm font-semibold text-white transition hover:bg-blue-900"
+                className="w-full rounded-full bg-medical-blue px-4 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-blue-900"
               >
                 Envoyer la demande
               </button>

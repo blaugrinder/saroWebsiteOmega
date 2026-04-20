@@ -17,11 +17,19 @@ export default function AboutPage() {
 
       <div className="mt-10 grid gap-5 md:grid-cols-3">
         {values.map((item) => (
-          <article key={item.title} className="rounded-2xl border border-slate-200 bg-soft-gray p-6">
+          <article key={item.title} className="rounded-2xl border border-slate-200 bg-soft-gray p-6 shadow-sm">
             <h2 className="text-xl font-semibold text-medical-blue">{item.title}</h2>
             <p className="mt-2 text-sm text-slate-600">{item.text}</p>
           </article>
         ))}
+      </div>
+
+      <div className="mt-8 rounded-2xl bg-gradient-to-r from-medical-blue to-blue-900 p-6 text-white">
+        <p className="text-xs uppercase tracking-widest text-blue-100">Mission SARO</p>
+        <p className="mt-3 max-w-3xl text-sm leading-6 text-blue-50">
+          Offrir une prise en charge medicale pre-hospitaliere fiable, rapide et humaine partout a Madagascar, avec un
+          niveau d'exigence constant sur la securite et la qualite de service.
+        </p>
       </div>
 
       <div className="mt-10 rounded-2xl border border-slate-200 p-6">

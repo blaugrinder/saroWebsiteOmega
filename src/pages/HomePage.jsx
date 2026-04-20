@@ -1,4 +1,17 @@
-import { ArrowUpRight, Award, Clock3, MapPinned, ShieldCheck, Siren } from 'lucide-react'
+import {
+  ArrowUpRight,
+  Award,
+  Clock3,
+  Handshake,
+  HeartPulse,
+  HousePlus,
+  MapPinned,
+  ShieldCheck,
+  Siren,
+  Stethoscope,
+  Truck,
+  Users,
+} from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 const highlights = [
@@ -11,6 +24,15 @@ const services = [
   { title: 'Urgence medicale 24/7', text: 'Prise en charge immediate et evacuation medicalisee vers la structure adaptee.' },
   { title: 'Transport medicalise national', text: 'Transferts interurbains, hospitaliers et sanitaires sur tout le territoire.' },
   { title: "Assistance d'evenements", text: 'Dispositifs medicaux pour spectacles, competitions, courses et trails.' },
+]
+
+const coreActivities = [
+  { icon: Truck, title: 'Transport medicalise', text: 'Transferts sanitaires sur tout Madagascar.' },
+  { icon: HeartPulse, title: "Assistance medicale d'urgence", text: 'Intervention rapide pour les situations critiques.' },
+  { icon: Users, title: "Couverture d'evenements", text: 'Dispositifs medicaux pour culture, sport et grands rassemblements.' },
+  { icon: HousePlus, title: 'Services medicaux a domicile', text: 'Accompagnement sanitaire adapte au domicile du patient.' },
+  { icon: Stethoscope, title: 'Transport medical specialise', text: 'Moyens et equipements adaptes aux situations complexes.' },
+  { icon: Handshake, title: 'Partenariats et contrats', text: 'Solutions dediees pour entreprises et institutions.' },
 ]
 
 const partnerLogos = Array.from({ length: 14 }, (_, i) => ({
@@ -71,6 +93,23 @@ export default function HomePage() {
         ))}
       </section>
 
+      <section className="mx-auto max-w-6xl px-4 pb-14 md:px-6">
+        <div className="grid gap-4 rounded-2xl border border-slate-200/80 bg-white p-5 shadow-xl shadow-slate-900/5 sm:grid-cols-3 sm:p-6">
+          <div className="rounded-xl bg-gradient-to-br from-medical-blue to-blue-900 p-5 text-white">
+            <p className="text-xs uppercase tracking-wider text-blue-100">Disponibilite</p>
+            <p className="mt-2 text-3xl font-semibold">24/7</p>
+          </div>
+          <div className="rounded-xl border border-slate-200 bg-white p-5">
+            <p className="text-xs uppercase tracking-wider text-slate-500">Couverture</p>
+            <p className="mt-2 text-xl font-semibold text-medical-blue">Tout Madagascar</p>
+          </div>
+          <div className="rounded-xl border border-slate-200 bg-white p-5">
+            <p className="text-xs uppercase tracking-wider text-slate-500">Service principal</p>
+            <p className="mt-2 text-xl font-semibold text-medical-blue">Urgence et transport medicalise</p>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-gradient-to-b from-[#f2f7ff] to-white py-16">
         <div className="mx-auto grid max-w-6xl gap-8 px-4 md:grid-cols-2 md:px-6">
           <div>
@@ -98,6 +137,25 @@ export default function HomePage() {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 pb-16 md:px-6">
+        <p className="text-sm font-semibold uppercase tracking-wider text-medical-red">Activites principales</p>
+        <h2 className="mt-2 text-3xl font-semibold text-medical-blue">Tout ce que SARO prend en charge</h2>
+        <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {coreActivities.map((activity) => (
+            <article
+              key={activity.title}
+              className="group rounded-2xl border border-slate-200 bg-white p-5 shadow-lg shadow-slate-900/5 transition duration-300 hover:-translate-y-1 hover:border-blue-200"
+            >
+              <div className="inline-flex rounded-lg bg-blue-50 p-2 text-medical-blue transition group-hover:bg-medical-blue group-hover:text-white">
+                <activity.icon className="h-5 w-5" />
+              </div>
+              <h3 className="mt-4 text-lg font-semibold text-medical-blue">{activity.title}</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-600">{activity.text}</p>
+            </article>
+          ))}
         </div>
       </section>
 
