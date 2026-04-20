@@ -10,10 +10,10 @@ export default function ContactPage() {
             evenementiel, envoyez les informations ci-dessous.
           </p>
           <a
-            href="tel:+261341234567"
+            href="tel:+261340500034"
             className="mt-6 inline-block rounded-full bg-medical-red px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-red-500/30 transition hover:bg-red-700"
           >
-            Urgence : +261 34 12 345 67
+            Urgence : +261 34 05 000 34
           </a>
           <div className="mt-5 flex flex-wrap gap-2">
             {['Urgence 24/7', 'Transport medicalise', "Assistance d'evenements"].map((chip) => (

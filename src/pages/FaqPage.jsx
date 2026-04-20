@@ -38,7 +38,7 @@ export default function FaqPage() {
           En situation urgente, ne restez pas sur la FAQ. Contactez directement notre regulation.
         </p>
         <a
-          href="tel:+261341234567"
+          href="tel:+261340500034"
           className="mt-4 inline-flex rounded-full bg-medical-red px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-red-700"
         >
           Appeler l'urgence

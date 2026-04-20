@@ -24,8 +24,8 @@ export default function Layout({ children }) {
       <div className="border-b border-blue-100 bg-medical-blue text-white">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2 text-xs md:px-6">
           <p>Interventions, transports medicalises et assistances evenementielles sur tout Madagascar</p>
-          <a href="tel:+261341234567" className="font-semibold text-blue-100 hover:text-white">
-            +261 34 12 345 67
+          <a href="tel:+261340500034" className="font-semibold text-blue-100 hover:text-white">
+            +261 34 05 000 34
           </a>
         </div>
       </div>
@@ -46,7 +46,7 @@ export default function Layout({ children }) {
 
           <div className="flex items-center gap-2">
             <a
-              href="tel:+261341234567"
+              href="tel:+261340500034"
               className="hidden items-center gap-2 rounded-full bg-medical-red px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-red-500/20 transition hover:-translate-y-0.5 hover:bg-red-700 md:inline-flex"
             >
               <PhoneCall className="h-4 w-4" />
@@ -78,7 +78,7 @@ export default function Layout({ children }) {
               ))}
             </nav>
             <a
-              href="tel:+261341234567"
+              href="tel:+261340500034"
               className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-medical-red px-4 py-2.5 text-sm font-semibold text-white"
             >
               <PhoneCall className="h-4 w-4" />
@@ -94,7 +94,7 @@ export default function Layout({ children }) {
         <div className="mx-auto grid max-w-6xl gap-6 px-4 text-sm text-slate-700 md:grid-cols-2 md:px-6">
           <div className="space-y-2">
             <p className="font-semibold text-medical-blue">SARO - Services d'Ambulances et de Reanimation Operationnelle</p>
-            <p>Ligne d'urgence : +261 34 12 345 67 - Service 24h/24 et 7j/7</p>
+            <p>Ligne d'urgence : +261 34 05 000 34 - Service 24h/24 et 7j/7</p>
           </div>
           <div className="space-y-1 text-xs text-slate-500 md:text-right">
             <p>Agreee par MSANP - Ndeg96/SG/DGS/DDS/SMLDP du 16/05/2012</p>

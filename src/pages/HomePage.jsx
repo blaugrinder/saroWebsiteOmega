@@ -64,7 +64,7 @@ export default function HomePage() {
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <a
-                href="tel:+261341234567"
+                href="tel:+261340500034"
                 className="rounded-full bg-medical-red px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-red-500/30 transition hover:-translate-y-0.5 hover:bg-red-700"
               >
                 Appeler maintenant
@@ -188,7 +188,6 @@ export default function HomePage() {
       <section className="mx-auto max-w-6xl px-4 pb-16 md:px-6">
         <div className="rounded-3xl border border-slate-200/80 bg-white p-6 shadow-xl shadow-slate-900/5 md:p-8">
           <p className="text-sm font-semibold uppercase tracking-wider text-medical-red">Ils nous font confiance</p>
-          <h2 className="mt-2 text-3xl font-semibold text-medical-blue">Entreprises partenaires</h2>
           <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-600">
             Ces entreprises et institutions nous ont deja fait confiance pour leurs besoins en urgence, transport
             medicalise et assistance evenementielle.
