@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --color-medical-blue: #0b2a57;
+  --color-medical-red: #e63b43;
+  --color-medical-slate: #365172;
+  --color-soft-gray: #f4f7fb;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+  color: #0f2340;
+  background: radial-gradient(circle at top, #eef5ff 0%, #ffffff 30%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: #0b2a57;
+  color: #ffffff;
+}
