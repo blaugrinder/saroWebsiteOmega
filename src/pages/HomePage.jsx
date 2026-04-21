@@ -208,7 +208,7 @@ export default function HomePage() {
                 className="overflow-hidden rounded-xl bg-white shadow-md transition duration-300 hover:-translate-y-1"
               >
                 <img
-                  src="/introduction-placeholder.jpg"
+                  src="/111.jpg"
                   alt={activity.title}
                   className="h-44 w-full object-cover"
                 />
