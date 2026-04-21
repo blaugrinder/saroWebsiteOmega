@@ -175,17 +175,54 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto -mt-14 grid max-w-6xl gap-5 px-4 pb-10 md:grid-cols-3 md:px-6">
-        {highlights.map((item) => (
-          <article
-            key={item.title}
-            className="rounded-2xl border border-white/80 bg-white/95 p-6 shadow-xl shadow-slate-900/5 backdrop-blur"
-          >
-            <item.icon className="h-7 w-7 text-medical-red" />
-            <h2 className="mt-4 text-xl font-semibold text-medical-blue">{item.title}</h2>
-            <p className="mt-2 text-sm leading-6 text-slate-600">{item.text}</p>
-          </article>
-        ))}
+      <section className="relative z-20 mt-10 px-4 pb-10 md:mt-14 md:px-6">
+        <div className="mx-auto grid max-w-5xl gap-0 overflow-hidden rounded-md bg-white shadow-xl md:grid-cols-3">
+          {highlights.map((item, index) => (
+            <article
+              key={item.title}
+              className={`p-6 md:p-7 ${index < highlights.length - 1 ? 'md:border-r md:border-slate-200' : ''}`}
+            >
+              <div className="inline-flex rounded-full bg-red-100 p-3 text-medical-red">
+                <item.icon className="h-5 w-5" />
+              </div>
+              <h2 className="mt-4 text-lg font-bold text-medical-blue">{item.title}</h2>
+              <p className="mt-2 text-sm leading-6 text-slate-500">{item.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="bg-gray-100 pt-28">
+        <div className="mx-auto max-w-6xl px-4 pb-16 md:px-6">
+          <div className="text-center">
+            <p className="text-sm font-medium uppercase tracking-wider text-slate-500">Nos services essentiels</p>
+            <h2 className="mt-3 text-3xl font-bold text-medical-blue md:text-4xl">
+              Tout ce que SARO prend en charge
+            </h2>
+          </div>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {coreActivities.slice(0, 3).map((activity) => (
+              <article
+                key={activity.title}
+                className="overflow-hidden rounded-xl bg-white shadow-md transition duration-300 hover:-translate-y-1"
+              >
+                <img
+                  src="/introduction-placeholder.jpg"
+                  alt={activity.title}
+                  className="h-44 w-full object-cover"
+                />
+                <div className="p-5">
+                  <h3 className="text-lg font-bold text-medical-blue">{activity.title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-500">{activity.text}</p>
+                  <a href="#contact" className="mt-4 inline-block text-xs font-semibold tracking-wider text-medical-red">
+                    READ MORE {'->'}
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
       </section>
 
       <section className="mx-auto max-w-6xl px-4 pb-14 md:px-6">
@@ -232,25 +269,6 @@ export default function HomePage() {
               </article>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-6xl px-4 pb-16 md:px-6">
-        <p className="text-sm font-semibold uppercase tracking-wider text-medical-red">Activites principales</p>
-        <h2 className="mt-2 text-3xl font-semibold text-medical-blue">Tout ce que SARO prend en charge</h2>
-        <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {coreActivities.map((activity) => (
-            <article
-              key={activity.title}
-              className="group rounded-2xl border border-slate-200 bg-white p-5 shadow-lg shadow-slate-900/5 transition duration-300 hover:-translate-y-1 hover:border-blue-200"
-            >
-              <div className="inline-flex rounded-lg bg-blue-50 p-2 text-medical-blue transition group-hover:bg-medical-blue group-hover:text-white">
-                <activity.icon className="h-5 w-5" />
-              </div>
-              <h3 className="mt-4 text-lg font-semibold text-medical-blue">{activity.title}</h3>
-              <p className="mt-2 text-sm leading-6 text-slate-600">{activity.text}</p>
-            </article>
-          ))}
         </div>
       </section>
 
