@@ -1,4 +1,6 @@
 import {
+  Activity,
+  ArrowRight,
   ArrowUpRight,
   Award,
   Clock3,
@@ -12,7 +14,7 @@ import {
   Truck,
   Users,
 } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 
 const highlights = [
   { icon: Clock3, title: 'Intervention rapide', text: 'Declenchement immediat et coordination active des equipages.' },
@@ -40,15 +42,36 @@ const partnerLogos = Array.from({ length: 14 }, (_, i) => ({
   alt: `Logo partenaire ${i + 1}`,
 }))
 
+const heroSlides = [
+  { src: '/111.jpg', alt: 'Ambulance en intervention' },
+  { src: '/222.jpg', alt: 'Equipe medicale SARO' },
+  { src: '/333.jpg', alt: 'Transport medicalise SARO' },
+]
+
 export default function HomePage() {
+  const [activeSlide, setActiveSlide] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveSlide((prev) => (prev + 1) % heroSlides.length)
+    }, 4500)
+
+    return () => clearInterval(timer)
+  }, [])
+
   return (
     <div className="animate-in fade-in duration-500">
-      <section className="relative overflow-hidden">
-        <img
-          src="https://images.unsplash.com/photo-1587745416684-47953f16f02f?auto=format&fit=crop&w=1800&q=80"
-          alt="Equipe ambulanciere en intervention"
-          className="h-[78vh] w-full object-cover"
-        />
+      <section className="relative h-[78vh] overflow-hidden">
+        {heroSlides.map((slide, index) => (
+          <img
+            key={slide.src}
+            src={slide.src}
+            alt={slide.alt}
+            className={`absolute inset-0 h-[78vh] w-full object-cover transition-opacity duration-1000 ${
+              index === activeSlide ? 'opacity-100' : 'opacity-0'
+            }`}
+          />
+        ))}
         <div className="absolute inset-0 bg-gradient-to-r from-[#061c3d]/95 via-[#0c2b57]/70 to-[#0c2b57]/20" />
         <div className="absolute inset-0 mx-auto flex w-full max-w-6xl items-center px-4 md:px-6">
           <div className="max-w-xl text-white">
@@ -69,13 +92,85 @@ export default function HomePage() {
               >
                 Appeler maintenant
               </a>
-              <Link
-                to="/contact"
+              <a
+                href="#contact"
                 className="rounded-full border border-white/60 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/15"
               >
                 Demander une ambulance
-              </Link>
+              </a>
             </div>
+          </div>
+        </div>
+        <div className="absolute bottom-7 left-1/2 flex -translate-x-1/2 gap-2">
+          {heroSlides.map((slide, index) => (
+            <button
+              key={slide.src}
+              type="button"
+              onClick={() => setActiveSlide(index)}
+              className={`h-2 rounded-full transition-all ${
+                index === activeSlide ? 'w-8 bg-white' : 'w-2 bg-white/60'
+              }`}
+              aria-label={`Afficher slide ${index + 1}`}
+            />
+          ))}
+        </div>
+      </section>
+      <section className="bg-[#f5f7fb] py-14">
+        <div className="mx-auto grid max-w-6xl items-center gap-8 px-4 md:grid-cols-[1fr_auto_1fr] md:px-6">
+          <div className="relative">
+            <div className="relative overflow-hidden rounded-2xl">
+              <img
+                src="/intro.jpg"
+                alt="Introduction SARO"
+                className="h-[430px] w-full object-cover"
+              />
+              <div className="absolute bottom-0 left-0 h-28 w-44 bg-white/45 [clip-path:polygon(0_35%,100%_100%,0_100%)]" />
+            </div>
+            <div className="absolute -bottom-6 left-6 flex items-center gap-3 rounded-lg bg-white px-5 py-4 shadow-xl shadow-slate-900/10">
+              <div className="rounded-md bg-red-50 p-2 text-medical-red">
+                <Truck className="h-5 w-5" />
+              </div>
+              <div>
+                <p className="text-xs text-slate-500">Established in</p>
+                <p className="text-2xl font-bold text-[#0B00D0]">1987</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mx-auto hidden h-[70%] w-px bg-gradient-to-b from-transparent via-[#FF2E2C] to-transparent md:block" />
+
+          <div className="self-center">
+            <p className="inline-flex items-center gap-2 text-sm text-slate-400">
+              <Activity className="h-4 w-4 text-slate-400" />
+              Our Introductions
+            </p>
+            <h2 className="mt-3 max-w-md text-4xl font-bold leading-tight text-[#0B00D0]">
+              A Leading Medical Service Provider
+            </h2>
+            <p className="mt-4 max-w-lg text-sm leading-7 text-slate-500">
+              SARO assure des interventions d'urgence, des transports medicalises nationaux et une assistance sanitaire
+              rigoureuse pour les particuliers, entreprises et evenements.
+            </p>
+
+            <div className="mt-7 grid gap-4 sm:grid-cols-2">
+              <article className="rounded-xl bg-white p-4 shadow-sm">
+                <ArrowRight className="h-4 w-4 text-[#FF2E2C]" />
+                <h3 className="mt-2 font-semibold text-slate-900">Help us Save a Life</h3>
+                <p className="mt-1 text-sm text-slate-500">Intervention rapide et coordination medicale immediate.</p>
+              </article>
+              <article className="rounded-xl bg-white p-4 shadow-sm">
+                <ArrowRight className="h-4 w-4 text-[#FF2E2C]" />
+                <h3 className="mt-2 font-semibold text-slate-900">Join our Big Family</h3>
+                <p className="mt-1 text-sm text-slate-500">Partenariats durables avec institutions et entreprises.</p>
+              </article>
+            </div>
+
+            <a
+              href="#confiance"
+              className="mt-8 inline-flex rounded-full bg-gradient-to-r from-[#FF4C4A] to-[#FF2E2C] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-red-300/60 transition hover:scale-[1.02] hover:brightness-95"
+            >
+              Discover About More
+            </a>
           </div>
         </div>
       </section>
@@ -119,12 +214,12 @@ export default function HomePage() {
               SARO est une structure agreee, experimentee, et mobilisable en continu pour les urgences, les transferts
               medicalises et la securisation sanitaire d'evenements de toute taille.
             </p>
-            <Link
-              to="/about"
+            <a
+              href="#confiance"
               className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-medical-blue transition hover:text-medical-red"
             >
               Decouvrir notre mission <ArrowUpRight className="h-4 w-4" />
-            </Link>
+            </a>
           </div>
           <div className="grid gap-4">
             {services.map((service) => (
