@@ -87,7 +87,7 @@ export default function HomePageStructured() {
         <div className="home-intro__grid site-container">
           <div className="home-intro__media">
             <div className="home-intro__media-frame"><img src="/../../public/images/intro.jpg" alt="Introduction SARO" className="home-intro__image" /><div className="home-intro__image-corner" /></div>
-            <div className="home-intro__founded"><div className="home-intro__founded-icon-wrap"><Truck className="home-intro__founded-icon" /></div><div><p className="home-intro__founded-label">Established in</p><p className="home-intro__founded-year">2012</p></div></div>
+            <div className="home-intro__founded"><div className="home-intro__founded-icon-wrap"><Truck className="home-intro__founded-icon" /></div><div><p className="home-intro__founded-label">Depuis</p><p className="home-intro__founded-year">2012</p></div></div>
           </div>
           <div className="home-intro__divider" />
           <div className="home-intro__content">
