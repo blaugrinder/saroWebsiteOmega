@@ -43,9 +43,9 @@ const partnerLogos = Array.from({ length: 14 }, (_, i) => ({
 }))
 
 const heroSlides = [
-  { src: '/111.jpg', alt: 'Ambulance en intervention' },
-  { src: '/222.jpg', alt: 'Equipe medicale SARO' },
-  { src: '/333.jpg', alt: 'Transport medicalise SARO' },
+  { src: '../../public/images/111.jpg', alt: 'Ambulance en intervention' },
+  { src: '../../public/images/222.jpg', alt: 'Equipe medicale SARO' },
+  { src: '../../public/images/333.jpg', alt: 'Transport medicalise SARO' },
 ]
 
 export default function HomePageStructured() {
@@ -86,7 +86,7 @@ export default function HomePageStructured() {
       <section className="home-intro">
         <div className="home-intro__grid site-container">
           <div className="home-intro__media">
-            <div className="home-intro__media-frame"><img src="/intro.jpg" alt="Introduction SARO" className="home-intro__image" /><div className="home-intro__image-corner" /></div>
+            <div className="home-intro__media-frame"><img src="/../../public/images/intro.jpg" alt="Introduction SARO" className="home-intro__image" /><div className="home-intro__image-corner" /></div>
             <div className="home-intro__founded"><div className="home-intro__founded-icon-wrap"><Truck className="home-intro__founded-icon" /></div><div><p className="home-intro__founded-label">Established in</p><p className="home-intro__founded-year">1987</p></div></div>
           </div>
           <div className="home-intro__divider" />
