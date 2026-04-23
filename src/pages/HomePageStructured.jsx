@@ -43,9 +43,9 @@ const partnerLogos = Array.from({ length: 14 }, (_, i) => ({
 }))
 
 const heroSlides = [
-  { src: '../../public/images/111.jpg', alt: 'Ambulance en intervention' },
-  { src: '../../public/images/222.jpg', alt: 'Equipe medicale SARO' },
-  { src: '../../public/images/333.jpg', alt: 'Transport medicalise SARO' },
+  { src: '/Images/111.jpg', alt: 'Ambulance en intervention' },
+  { src: '/Images/222.jpg', alt: 'Equipe medicale SARO' },
+  { src: '/Images/333.jpg', alt: 'Transport medicalise SARO' },
 ]
 
 export default function HomePageStructured() {
@@ -86,7 +86,7 @@ export default function HomePageStructured() {
       <section className="home-intro">
         <div className="home-intro__grid site-container">
           <div className="home-intro__media">
-            <div className="home-intro__media-frame"><img src="/../../public/images/intro.jpg" alt="Introduction SARO" className="home-intro__image" /><div className="home-intro__image-corner" /></div>
+            <div className="home-intro__media-frame"><img src="/Images/intro.jpg" alt="Introduction SARO" className="home-intro__image" /><div className="home-intro__image-corner" /></div>
             <div className="home-intro__founded"><div className="home-intro__founded-icon-wrap"><Truck className="home-intro__founded-icon" /></div><div><p className="home-intro__founded-label">Depuis</p><p className="home-intro__founded-year">2012</p></div></div>
           </div>
           <div className="home-intro__divider" />
@@ -105,7 +105,7 @@ export default function HomePageStructured() {
 
       <section className="home-highlights"><div className="home-highlights__grid site-container site-container--compact">{highlights.map((item, index) => (<article key={item.title} className={`home-highlights__card ${index < highlights.length - 1 ? 'home-highlights__card--with-border' : ''}`}><div className="home-highlights__icon-wrap"><item.icon className="home-highlights__icon" /></div><h2 className="home-highlights__title">{item.title}</h2><p className="home-highlights__text">{item.text}</p></article>))}</div></section>
 
-      <section className="home-activities"><div className="site-container home-activities__content"><div className="home-section-header"><p className="home-section-header__eyebrow">Nos services essentiels</p><h2 className="home-section-header__title">Tout ce que SARO prend en charge</h2></div><div className="home-activities__grid">{coreActivities.slice(0, 3).map((activity) => (<article key={activity.title} className="home-activities__card"><img src="/111.jpg" alt={activity.title} className="home-activities__image" /><div className="home-activities__card-body"><h3 className="home-activities__card-title">{activity.title}</h3><p className="home-activities__card-text">{activity.text}</p><a href="#contact" className="home-activities__card-link">READ MORE {'->'}</a></div></article>))}</div></div></section>
+      <section className="home-activities"><div className="site-container home-activities__content"><div className="home-section-header"><p className="home-section-header__eyebrow">Nos services essentiels</p><h2 className="home-section-header__title">Tout ce que SARO prend en charge</h2></div><div className="home-activities__grid">{coreActivities.slice(0, 3).map((activity) => (<article key={activity.title} className="home-activities__card"><img src="/Images/111.jpg" alt={activity.title} className="home-activities__image" /><div className="home-activities__card-body"><h3 className="home-activities__card-title">{activity.title}</h3><p className="home-activities__card-text">{activity.text}</p><a href="#contact" className="home-activities__card-link">READ MORE {'->'}</a></div></article>))}</div></div></section>
 
       <section className="home-kpis site-container"><div className="home-kpis__grid"><div className="home-kpis__card home-kpis__card--primary"><p className="home-kpis__label">Disponibilite</p><p className="home-kpis__value">24/7</p></div><div className="home-kpis__card"><p className="home-kpis__label home-kpis__label--dark">Couverture</p><p className="home-kpis__value home-kpis__value--small">Tout Madagascar</p></div><div className="home-kpis__card"><p className="home-kpis__label home-kpis__label--dark">Service principal</p><p className="home-kpis__value home-kpis__value--small">Urgence et transport medicalise</p></div></div></section>
 
