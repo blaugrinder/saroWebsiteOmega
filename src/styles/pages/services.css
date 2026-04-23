@@ -1,0 +1,19 @@
+.services-page { padding: 3.5rem 0; }
+.services-page__eyebrow { color: var(--color-medical-red); text-transform: uppercase; letter-spacing: .06em; font-size: .8rem; font-weight: 700; }
+.services-page__title { margin: .5rem 0 0; max-width: 800px; color: var(--color-medical-blue); font-size: clamp(1.9rem, 4vw, 2.5rem); }
+.services-page__intro { max-width: 760px; color: #334155; line-height: 1.7; }
+.services-page__grid { margin-top: 2rem; display: grid; gap: 1rem; }
+.services-page__card { border: 1px solid #e2e8f0; border-radius: var(--radius-2xl); background: #fff; padding: 1.2rem; box-shadow: 0 12px 24px rgba(15,23,42,.06); transition: transform .2s ease, border-color .2s ease; }
+.services-page__card:hover { transform: translateY(-4px); border-color: #bfdbfe; }
+.services-page__icon-wrap { display: inline-flex; border-radius: .7rem; background: #eff6ff; color: var(--color-medical-blue); padding: .5rem; }
+.services-page__icon { width: 1.2rem; height: 1.2rem; }
+.services-page__card-title { margin: .8rem 0 0; color: var(--color-medical-blue); }
+.services-page__card-text { margin-top: .55rem; color: #475569; line-height: 1.6; font-size: .9rem; }
+
+@media (min-width: 768px) {
+  .services-page__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1024px) {
+  .services-page__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}

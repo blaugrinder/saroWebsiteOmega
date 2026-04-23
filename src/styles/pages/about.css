@@ -1,0 +1,18 @@
+.about-page { padding: 3.5rem 0; }
+.about-page__eyebrow { color: var(--color-medical-red); text-transform: uppercase; letter-spacing: .06em; font-size: .8rem; font-weight: 700; }
+.about-page__title { margin: .5rem 0 0; color: var(--color-medical-blue); font-size: clamp(1.9rem, 4vw, 2.6rem); max-width: 900px; }
+.about-page__intro { max-width: 760px; color: #334155; line-height: 1.7; }
+.about-page__values { margin-top: 2rem; display: grid; gap: 1rem; }
+.about-page__value-card { border: 1px solid #e2e8f0; border-radius: var(--radius-2xl); background: var(--color-soft-gray); padding: 1.2rem; }
+.about-page__value-title { margin: 0; color: var(--color-medical-blue); }
+.about-page__value-text { margin-top: .5rem; color: #475569; font-size: .9rem; }
+.about-page__mission { margin-top: 1.8rem; border-radius: var(--radius-2xl); background: linear-gradient(90deg, var(--color-medical-blue), #1e3a8a); color: #fff; padding: 1.2rem; }
+.about-page__mission-eyebrow { margin: 0; text-transform: uppercase; letter-spacing: .08em; color: #dbeafe; font-size: .72rem; }
+.about-page__mission-text { margin: .7rem 0 0; max-width: 780px; color: #dbeafe; font-size: .9rem; line-height: 1.65; }
+.about-page__compliance { margin-top: 2rem; border: 1px solid #e2e8f0; border-radius: var(--radius-2xl); padding: 1.2rem; background: #fff; }
+.about-page__compliance-title { margin: 0; color: var(--color-medical-blue); }
+.about-page__compliance-list { margin: .8rem 0 0; padding-left: 1.15rem; color: #334155; line-height: 1.7; }
+
+@media (min-width: 768px) {
+  .about-page__values { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}

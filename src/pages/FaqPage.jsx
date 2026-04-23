@@ -19,27 +19,27 @@ const faqs = [
 
 export default function FaqPage() {
   return (
-    <section className="mx-auto max-w-5xl px-4 py-14 md:px-6">
-      <p className="text-sm font-semibold uppercase tracking-wider text-medical-red">FAQ</p>
-      <h1 className="mt-2 text-4xl font-semibold text-medical-blue">Questions frequentes</h1>
+    <section className="faq-page site-container site-container--narrow">
+      <p className="faq-page__eyebrow">FAQ</p>
+      <h1 className="faq-page__title">Questions frequentes</h1>
 
-      <div className="mt-10 space-y-4">
+      <div className="faq-page__list">
         {faqs.map((item) => (
-          <details key={item.q} className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
-            <summary className="cursor-pointer list-none font-semibold text-medical-blue">{item.q}</summary>
-            <p className="mt-3 text-sm leading-6 text-slate-600">{item.a}</p>
+          <details key={item.q} className="faq-page__item">
+            <summary className="faq-page__question">{item.q}</summary>
+            <p className="faq-page__answer">{item.a}</p>
           </details>
         ))}
       </div>
 
-      <div className="mt-10 rounded-2xl border border-blue-200 bg-blue-50 p-6">
-        <h2 className="text-2xl font-semibold text-medical-blue">Besoin d'une reponse immediate ?</h2>
-        <p className="mt-2 text-sm text-slate-600">
+      <div className="faq-page__help-box">
+        <h2 className="faq-page__help-title">Besoin d'une reponse immediate ?</h2>
+        <p className="faq-page__help-text">
           En situation urgente, ne restez pas sur la FAQ. Contactez directement notre regulation.
         </p>
         <a
           href="tel:+261340500034"
-          className="mt-4 inline-flex rounded-full bg-medical-red px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-red-700"
+          className="faq-page__help-call"
         >
           Appeler l'urgence
         </a>

@@ -41,27 +41,27 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <section className="mx-auto max-w-6xl px-4 py-14 md:px-6">
-      <p className="text-sm font-semibold uppercase tracking-wider text-medical-red">Nos services</p>
-      <h1 className="mt-2 max-w-4xl text-4xl font-semibold text-medical-blue">
+    <section className="services-page site-container">
+      <p className="services-page__eyebrow">Nos services</p>
+      <h1 className="services-page__title">
         Les activites principales de SARO
       </h1>
-      <p className="mt-4 max-w-3xl text-slate-700">
+      <p className="services-page__intro">
         Nous proposons une prise en charge medicale complete sur tout Madagascar, pour les urgences, les transports
         sanitaires et les besoins professionnels.
       </p>
 
-      <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="services-page__grid">
         {services.map((service) => (
           <article
             key={service.title}
-            className="rounded-2xl border border-slate-200 bg-white p-6 shadow-lg shadow-slate-900/5 transition duration-300 hover:-translate-y-1 hover:border-blue-200"
+            className="services-page__card"
           >
-            <div className="inline-flex rounded-lg bg-blue-50 p-2 text-medical-blue">
-              <service.icon className="h-5 w-5" />
+            <div className="services-page__icon-wrap">
+              <service.icon className="services-page__icon" />
             </div>
-            <h2 className="text-2xl font-semibold text-medical-blue">{service.title}</h2>
-            <p className="mt-3 text-sm leading-6 text-slate-600">{service.description}</p>
+            <h2 className="services-page__card-title">{service.title}</h2>
+            <p className="services-page__card-text">{service.description}</p>
           </article>
         ))}
       </div>

@@ -1,0 +1,114 @@
+.site-shell {
+  min-height: 100vh;
+  background: #f8fbff;
+}
+
+.site-topbar {
+  border-bottom: 1px solid #dbeafe;
+  background: var(--color-medical-blue);
+  color: #fff;
+}
+
+.site-topbar__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.55rem 0;
+  font-size: 0.78rem;
+}
+
+.site-topbar__phone {
+  color: #dbeafe;
+  font-weight: 700;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.88);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 0;
+}
+
+.site-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-medical-blue);
+}
+
+.site-brand__icon { width: 1.5rem; height: 1.5rem; }
+.site-brand__name { font-weight: 700; }
+
+.site-nav { display: flex; gap: 1.3rem; }
+.site-nav--mobile { flex-direction: column; gap: 1rem; }
+.site-nav--desktop { display: none; }
+
+.site-nav__link {
+  color: #334155;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.site-nav__link:hover { color: var(--color-medical-blue); }
+.site-nav__link--active { color: var(--color-medical-red); }
+
+.site-header__actions { display: flex; align-items: center; gap: 0.6rem; }
+
+.site-cta {
+  align-items: center;
+  gap: 0.4rem;
+  border-radius: 999px;
+  font-weight: 700;
+  background: var(--color-medical-red);
+  color: #fff;
+}
+.site-cta__icon { width: 1rem; height: 1rem; }
+.site-cta--desktop { display: none; padding: 0.58rem 1rem; font-size: 0.85rem; }
+.site-cta--mobile { display: inline-flex; width: 100%; justify-content: center; padding: 0.7rem 1rem; margin-top: 1rem; }
+
+.site-menu-button {
+  border: 1px solid #e2e8f0;
+  border-radius: 0.55rem;
+  background: #fff;
+  color: var(--color-medical-blue);
+  padding: 0.45rem;
+}
+.site-menu-button__icon { width: 1.25rem; height: 1.25rem; }
+
+.site-mobile-menu {
+  border-top: 1px solid #e2e8f0;
+  background: #fff;
+  padding: 1rem;
+}
+
+.site-footer {
+  border-top: 1px solid #e2e8f0;
+  background: #fff;
+  padding: 2.5rem 0;
+}
+
+.site-footer__inner {
+  display: grid;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: #334155;
+}
+
+.site-footer__title { font-weight: 700; color: var(--color-medical-blue); }
+.site-footer__legal { font-size: 0.78rem; color: #64748b; }
+
+@media (min-width: 768px) {
+  .site-nav--desktop { display: flex; }
+  .site-cta--desktop { display: inline-flex; }
+  .site-menu-button { display: none; }
+  .site-footer__inner { grid-template-columns: 1fr 1fr; }
+  .site-footer__legal { text-align: right; }
+}

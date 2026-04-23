@@ -1,0 +1,26 @@
+.contact-page { padding: 3.5rem 0; }
+.contact-page__grid { display: grid; gap: 2rem; }
+.contact-page__eyebrow { color: var(--color-medical-red); text-transform: uppercase; letter-spacing: .06em; font-size: .8rem; font-weight: 700; }
+.contact-page__title { margin: .5rem 0 0; color: var(--color-medical-blue); font-size: clamp(1.9rem, 4vw, 2.5rem); }
+.contact-page__intro { color: #334155; line-height: 1.7; }
+.contact-page__urgent-call { margin-top: 1rem; display: inline-block; border-radius: 999px; background: var(--color-medical-red); color: #fff; padding: .72rem 1.2rem; font-size: .9rem; font-weight: 700; }
+.contact-page__chips { margin-top: 1rem; display: flex; flex-wrap: wrap; gap: .45rem; }
+.contact-page__chip { border: 1px solid #bfdbfe; border-radius: 999px; background: #eff6ff; color: var(--color-medical-blue); padding: .3rem .65rem; font-size: .75rem; font-weight: 600; }
+.contact-page__info-card { margin-top: 1rem; border: 1px solid #e2e8f0; border-radius: var(--radius-xl); background: #fff; padding: 1rem; }
+.contact-page__info-title { margin: 0; color: var(--color-medical-blue); }
+.contact-page__info-highlight { margin: .5rem 0 0; color: var(--color-medical-red); font-weight: 700; }
+.contact-page__info-text { margin: .45rem 0 0; color: #475569; font-size: .9rem; }
+.contact-page__sidebar { display: grid; gap: 1rem; }
+.contact-page__form { border: 1px solid #e2e8f0; border-radius: var(--radius-2xl); background: linear-gradient(135deg, #f4f8ff, #fff); padding: 1.2rem; box-shadow: 0 12px 24px rgba(15,23,42,.06); }
+.contact-page__form-title { margin: 0; color: var(--color-medical-blue); }
+.contact-page__form-fields { margin-top: .9rem; display: grid; gap: .65rem; }
+.contact-page__input { width: 100%; border: 1px solid #cbd5e1; border-radius: .6rem; background: #fff; padding: .65rem .8rem; font-size: .9rem; }
+.contact-page__input:focus { outline: none; border-color: var(--color-medical-blue); }
+.contact-page__submit { width: 100%; border: 0; border-radius: 999px; background: var(--color-medical-blue); color: #fff; padding: .75rem 1rem; font-weight: 700; cursor: pointer; }
+.contact-page__submit:hover { background: #14386f; }
+.contact-page__map-frame { border: 1px solid #e2e8f0; border-radius: var(--radius-2xl); overflow: hidden; }
+.contact-page__map { width: 100%; height: 290px; border: 0; }
+
+@media (min-width: 768px) {
+  .contact-page__grid { grid-template-columns: 1fr 1fr; }
+}

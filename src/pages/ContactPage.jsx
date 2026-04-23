@@ -1,58 +1,58 @@
 export default function ContactPage() {
   return (
-    <section className="mx-auto max-w-6xl px-4 py-14 md:px-6">
-      <div className="grid gap-8 md:grid-cols-2">
+    <section className="contact-page site-container">
+      <div className="contact-page__grid">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-wider text-medical-red">Contact et regulation</p>
-          <h1 className="mt-2 text-4xl font-semibold text-medical-blue">Demander une intervention SARO</h1>
-          <p className="mt-4 text-slate-700">
+          <p className="contact-page__eyebrow">Contact et regulation</p>
+          <h1 className="contact-page__title">Demander une intervention SARO</h1>
+          <p className="contact-page__intro">
             En cas d'urgence vitale, appelez directement. Pour toute demande de transport medicalise ou de dispositif
             evenementiel, envoyez les informations ci-dessous.
           </p>
           <a
             href="tel:+261340500034"
-            className="mt-6 inline-block rounded-full bg-medical-red px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-red-500/30 transition hover:bg-red-700"
+            className="contact-page__urgent-call"
           >
             Urgence : +261 34 05 000 34
           </a>
-          <div className="mt-5 flex flex-wrap gap-2">
+          <div className="contact-page__chips">
             {['Urgence 24/7', 'Transport medicalise', "Assistance d'evenements"].map((chip) => (
-              <span key={chip} className="rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs font-medium text-medical-blue">
+              <span key={chip} className="contact-page__chip">
                 {chip}
               </span>
             ))}
           </div>
-          <div className="mt-6 rounded-xl border border-slate-200 p-5">
-            <h2 className="text-xl font-semibold text-medical-blue">Horaires</h2>
-            <p className="mt-2 font-semibold text-medical-red">24h/24 - 7j/7</p>
-            <p className="text-sm text-slate-600">Regulation, equipages et transport medicalise disponibles en continu.</p>
+          <div className="contact-page__info-card">
+            <h2 className="contact-page__info-title">Horaires</h2>
+            <p className="contact-page__info-highlight">24h/24 - 7j/7</p>
+            <p className="contact-page__info-text">Regulation, equipages et transport medicalise disponibles en continu.</p>
           </div>
-          <div className="mt-6 rounded-xl border border-slate-200 p-5">
-            <h2 className="text-xl font-semibold text-medical-blue">Zones couvertes</h2>
-            <p className="mt-2 text-sm text-slate-600">Tout Madagascar.</p>
+          <div className="contact-page__info-card">
+            <h2 className="contact-page__info-title">Zones couvertes</h2>
+            <p className="contact-page__info-text">Tout Madagascar.</p>
           </div>
         </div>
 
-        <div className="space-y-6">
-          <form className="rounded-2xl border border-slate-200 bg-gradient-to-br from-[#f4f8ff] to-white p-6 shadow-lg shadow-slate-900/5">
-            <h2 className="text-xl font-semibold text-medical-blue">Formulaire de demande</h2>
-            <div className="mt-4 space-y-4">
+        <div className="contact-page__sidebar">
+          <form className="contact-page__form">
+            <h2 className="contact-page__form-title">Formulaire de demande</h2>
+            <div className="contact-page__form-fields">
               <input
                 type="text"
                 placeholder="Nom complet"
-                className="w-full rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm outline-none focus:border-medical-blue"
+                className="contact-page__input"
               />
               <input
                 type="tel"
                 placeholder="Numero de telephone"
-                className="w-full rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm outline-none focus:border-medical-blue"
+                className="contact-page__input"
               />
               <input
                 type="text"
                 placeholder="Localisation"
-                className="w-full rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm outline-none focus:border-medical-blue"
+                className="contact-page__input"
               />
-              <select className="w-full rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm outline-none focus:border-medical-blue">
+              <select className="contact-page__input">
                 <option>Niveau d'urgence</option>
                 <option>Critique</option>
                 <option>Urgent</option>
@@ -60,18 +60,18 @@ export default function ContactPage() {
               </select>
               <button
                 type="submit"
-                className="w-full rounded-full bg-medical-blue px-4 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-blue-900"
+                className="contact-page__submit"
               >
                 Envoyer la demande
               </button>
             </div>
           </form>
 
-          <div className="overflow-hidden rounded-2xl border border-slate-200">
+          <div className="contact-page__map-frame">
             <iframe
               title="Position SARO"
               src="https://www.google.com/maps?q=Antananarivo&output=embed"
-              className="h-72 w-full border-0"
+              className="contact-page__map"
               loading="lazy"
             />
           </div>
